@@ -25,12 +25,6 @@ body {
     transform-style: preserve-3d;
     animation: rotate 20s linear infinite;
 }
-.container:hover {
-    animation-play-state: paused;
-}
-.container:active {
-    animation-play-state: running;
-}
 
 @keyframes rotate {
     0% {
@@ -63,7 +57,7 @@ body {
     border: 4px double rgb(0, 0, 0);
 }
 img:hover {
-    transform: translateY(-3px);
+    transform: translateY(-10px);
     cursor: pointer;
 }
 
@@ -75,4 +69,42 @@ img:hover {
     .container span {
         transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
     }
+}
+
+.buttons {
+    width: fit-content;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+}
+.buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    transition: 0.5s;
+}
+.buttons button:hover {
+    background-color: #eee;
+    color: #000;
+	cursor: pointer;
+}
+.play-icon {
+    width: 24px; 
+    height: 24px;
+    display: none;
+}
+.pause-icon {
+    width: 24px; 
+    height: 24px;
+    display: block;
 }

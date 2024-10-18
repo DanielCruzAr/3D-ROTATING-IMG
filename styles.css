@@ -14,6 +14,7 @@ body {
         #D9D0C7,
         #35403F
     );
+    background-repeat: no-repeat;
     overflow: hidden;
 }
 
@@ -26,6 +27,9 @@ body {
 }
 .container:hover {
     animation-play-state: paused;
+}
+.container:active {
+    animation-play-state: running;
 }
 
 @keyframes rotate {
